@@ -1,4 +1,4 @@
-Khael Ashly P. Tena - React Portfolio (React + Express + Prisma ORM + MySQL)
+Khael Tena - React Portfolio (React + Express + Prisma ORM + MySQL)
 
 ONE-TIME SETUP
 1. In MySQL Workbench, run your CREATE TABLE script, then backend/seed.sql (only once).
