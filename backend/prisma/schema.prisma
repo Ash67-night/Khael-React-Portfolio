@@ -1,0 +1,34 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model projects {
+  id           Int       @id @default(autoincrement())
+  title        String    @db.VarChar(150)
+  description  String?   @db.Text
+  technologies String?   @db.VarChar(255)
+  project_link String?   @db.VarChar(255)
+  created_at   DateTime? @default(now()) @db.Timestamp(0)
+}
+
+model certificates {
+  id               Int       @id @default(autoincrement())
+  title            String    @db.VarChar(150)
+  issuer           String?   @db.VarChar(150)
+  certificate_file String?   @db.VarChar(255)
+  date_earned      DateTime? @db.Date
+}
+
+model messages {
+  id         Int       @id @default(autoincrement())
+  name       String    @db.VarChar(100)
+  email      String    @db.VarChar(150)
+  message    String    @db.Text
+  created_at DateTime? @default(now()) @db.Timestamp(0)
+}
